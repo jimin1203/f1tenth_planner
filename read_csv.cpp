@@ -1,22 +1,41 @@
 #include <iostream>
-#include <string.h>
 #include <fstream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-int main (int argc, char** argv) {
-  string str_buf;
-  fstream fs;
+int main() {
+    ifstream file;
+    file.open("traj_ltpl_cl_levine.csv", ios_base::in);
+    if(!file.is_open()) {
+        cout << "Error: 파일이 열리지 않음." << endl;
+        return 1;
+    }
 
-  fs.open("levine.csv", ios::in);
+    string line;
+    while (getline(file, line)) {
+        line.erase(remove(line.begin(), line.end(), '\r'), line.end());
+        
+        if (line.empty() || line[0] == '#') continue;
+        
+            stringstream ss(line); // line을 문자 stream으로 변환 
+            string value;
+            vector<double> numbers;
 
-  while (!fs.eof()) {
-    getline(fs, str_buf, ',');
-    cout<<str_buf<<endl;
-  }
-
-  fs.close()
-
-  return 0;
-
+            while (getline(ss, value, ';')) {
+                try {
+                    numbers.push_back(stod(value));
+                } catch (...) {
+                    std::cout << "숫자 변환 실패: [" << value << "]" << std::endl;
+                }
+                    
+            }
+        cout << "x: " << numbers[0] << ", y: " << numbers[1] <<", width_right: " << numbers[2]<< endl;
+    
+    }
+    file.close();
+    return 0;
 }
