@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     ifstream file;
-    file.open("traj_ltpl_cl_levine.csv", ios_base::in);
+    file.open("tgtpl_levine.csv", ios_base::in);
     if(!file.is_open()) {
         cout << "Error: 파일이 열리지 않음." << endl;
         return 1;

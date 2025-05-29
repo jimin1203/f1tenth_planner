@@ -1,6 +1,4 @@
-# 83152a03-5a7d-4996-812c-ab17bdbcf0fd
-# fa6dd5aa5c60fc24f97b1c07282f552698c45468
-# x_ref_m; y_ref_m; width_right_m; width_left_m; x_normvec_m; y_normvec_m; alpha_m; s_racetraj_m; psi_racetraj_rad; kappa_racetraj_radpm; vx_racetraj_mps; ax_racetraj_mps2
+x_ref_m; y_ref_m; width_right_m; width_left_m; x_normvec_m; y_normvec_m; alpha_m; s_racetraj_m; psi_racetraj_rad; kappa_racetraj_radpm; vx_racetraj_mps; ax_racetraj_mps2
 -13.6470266; 5.2487112; 0.7541789; 0.8582211; -0.9990830; 0.0428166; 0.5530841; 0.0000000; 3.1358160; -0.0480655; 6.5453358; 4.4408806
 -13.6495607; 5.1921496; 0.7541789; 0.8582211; -0.9989107; 0.0466630; 0.5510297; 0.0545314; 3.1334061; -0.0482810; 6.5791719; 4.4319752
 -13.6523159; 5.1354111; 0.7549538; 0.8597738; -0.9987338; 0.0503073; 0.5489015; 0.1093715; 3.1310415; -0.0461655; 6.6127676; 4.4230877
