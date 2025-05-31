@@ -20,7 +20,7 @@ void makeCSVFile (const string& filename, const vector<double>& data) {
 }
 
 
-int main() {
+void readCSV() {
   rapidcsv::Document csv("inputs/gtpl_levine.csv",
                           rapidcsv::LabelParams(0, -1),
                           rapidcsv::SeparatorParams(';')
@@ -37,7 +37,5 @@ int main() {
         data_col[name] = col;
         makeCSVFile(name, col);
     }
-
-    return 0;
 
 }

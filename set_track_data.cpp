@@ -38,7 +38,7 @@ void makeCSVFile2D(const string& filename, const vector<vector<double>>& data) {
     file.close();
 }
 
-int main() {
+void settrack() {
     rapidcsv::Document csv("inputs/gtpl_levine.csv",
                             rapidcsv::LabelParams(0, -1),
                             rapidcsv::SeparatorParams(';'));
@@ -69,5 +69,4 @@ int main() {
     makeCSVFile2D("bound_r", data.bound_r);
     makeCSVFile2D("bound_l", data.bound_l);
 
-    return 0;
 }
