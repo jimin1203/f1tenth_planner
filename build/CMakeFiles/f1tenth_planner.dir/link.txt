@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/f1tenth_planner.dir/read_csv1.cpp.o CMakeFiles/f1tenth_planner.dir/set_track_data.cpp.o CMakeFiles/f1tenth_planner.dir/main.cpp.o -o f1tenth_planner 

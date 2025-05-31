@@ -1,6 +1,7 @@
 #include "include/rapidcsv.h"
 #include <vector>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -9,6 +10,7 @@ struct Track {
     vector<vector<double>> normvec;
     vector<vector<double>> bound_r;
     vector<vector<double>> bound_l;
+    vector<vector<double>> raceline;
 
     vector<double> x_ref;
     vector<double> y_ref;
@@ -16,9 +18,8 @@ struct Track {
     vector<double> width_left;
     vector<double> x_normvec;
     vector<double> y_normvec;
+    vector<double> alpha;
 };
-
-#include <fstream>
 
 void makeCSVFile2D(const string& filename, const vector<vector<double>>& data) {
     ofstream file("inputs/glob_inputs/" + filename + ".csv");
@@ -38,7 +39,7 @@ void makeCSVFile2D(const string& filename, const vector<vector<double>>& data) {
     file.close();
 }
 
-void settrack() {
+int main() {
     rapidcsv::Document csv("inputs/gtpl_levine.csv",
                             rapidcsv::LabelParams(0, -1),
                             rapidcsv::SeparatorParams(';'));
@@ -50,6 +51,7 @@ void settrack() {
     data.width_left = csv.GetColumn<double>(" width_left_m");
     data.x_normvec = csv.GetColumn<double>(" x_normvec_m");
     data.y_normvec = csv.GetColumn<double>(" y_normvec_m");
+    data.alpha = csv.GetColumn<double>(" alpha_m");
 
     for (size_t i = 0; i < data.x_ref.size(); ++i) {
         
@@ -63,10 +65,16 @@ void settrack() {
         double bl_x = data.x_ref[i] - data.x_normvec[i] * data.width_left[i];
         double bl_y = data.y_ref[i] - data.y_normvec[i] * data.width_left[i];
         data.bound_l.push_back({bl_x, bl_y});
+
+        double rx = data.x_ref[i] + data.x_normvec[i] * data.alpha[i];
+        double ry = data.y_ref[i] + data.y_normvec[i] * data.alpha[i];
+        data.raceline.push_back({rx, ry});
     }
 
     makeCSVFile2D("refline", data.refline);
+    makeCSVFile2D("raceline", data.raceline);
     makeCSVFile2D("bound_r", data.bound_r);
     makeCSVFile2D("bound_l", data.bound_l);
 
+    return 0;
 }
