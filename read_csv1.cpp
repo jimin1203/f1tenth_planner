@@ -2,24 +2,28 @@
 #include <sstream>
 #include <fstream>
 #include <vector>
+#include <iomanip>  
 #include "include/rapidcsv.h"
 
 using namespace std;
 
-void makeCSVFile (const string& filename, const vector<double>& data) {
-
-    ofstream file("inputs/glob_inputs/"+filename+".csv");
+// 벡터 받으면 CSV에 만들어서 저장하는 함수 
+void makeCSVFile(const string& filename, const vector<double>& data) {
+    ofstream file("inputs/glob_inputs/" + filename + ".csv");
     if (!file.is_open()) {
         cout << "파일을 열 수 없습니다." << endl;
         return;
     }
 
-    for (const auto& val : data) file << val << '\n';  
-    
+    file << std::fixed << std::setprecision(7);  // << 여기서 정밀도 설정!
+    for (const auto& val : data)
+        file << val << '\n';
+
     file.close();
 }
 
 
+// 각 열을 읽어서 모두 CSV로 만드는 함수.
 int main() {
   rapidcsv::Document csv("inputs/gtpl_levine.csv",
                           rapidcsv::LabelParams(0, -1),

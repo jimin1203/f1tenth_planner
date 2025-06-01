@@ -5,22 +5,19 @@
 const int rl_kappa = 9;
 const int rl_s = 7;
 
-
-
-// 참고: https://www.perplexity.ai/search/suppose-we-implement-a-config-71VED5sDR.eBEzGacDZvXg#2
 struct Offline_Params {
 
         // [LATTICE]
         float LAT_RESOLUTION=0.5;       // Lateral spacing (m) between nodes along each normal
         float VARIABLE_HEADING=true;    // Determines if node headings are interpolated between boundary and race line angles (else: match race line).
-        float LON_STRAIGHT_STEP=30.0;   // Max distance (m) between norm vectors along straights on the reference line
-        float LON_CURVE_STEP=10.0;      // Max norm vector spacing (m) on reference-line curves.
+        float LON_STRAIGHT_STEP=2.5;   // Max distance (m) between norm vectors along straights on the reference line
+        float LON_CURVE_STEP=1.5;      // Max norm vector spacing (m) on reference-line curves.
                                         // NOTE: Set notably higher than base values.
         float CURVE_THR=0.008;          // Curvature value (1/radius) that separates straight from curved segments
         float LAT_OFFSET=0.25;          // Permitted lateral deviation from the raceline per meter traveled.
         float VIRT_GOAL_N=true;         // Proxy target node per layer. Graph search uses this node directly, skipping iterative checks on adjacent goal-layer nodes.
         float MIN_VEL_RACE=0.50;        // Minimum allowed speed as % of global race line; splines below this are excluded (set to 0.0 to allow all).
-        float CLOSURE_DETECTION_DIST=20.0; // If track ends(first, last) are within this distance (m), treat as closed loop.
+        float CLOSURE_DETECTION_DIST=0.1; // If track ends(first, last) are within this distance (m), treat as closed loop.
 
         // [PLANNINGTARGET]
         float VEL_DECREASE_LAT=0.1;     // PLANNING TARGET VELOCITY : % goal speed reduced per meter the goal is offset from the raceline.
@@ -47,26 +44,25 @@ struct Offline_Params {
 };
 
  
-struct Online_Params {
+// struct Online_Params {
 
-};
+// };
 
-//참고: https://www.perplexity.ai/search/suppose-we-implement-a-config-71VED5sDR.eBEzGacDZvXg#2
-class Offline_Config {
-public:
-    const Offline_Params& get() const { return params_; }
-    void set(const Offline_Params& new_params) { params_ = new_params; }
+// class Offline_Config {
+// public:
+//     const Offline_Params& get() const { return params_; }
+//     void set(const Offline_Params& new_params) { params_ = new_params; }
 
-private:
-    Offline_Params params_;
-};
+// private:
+//     Offline_Params params_;
+// };
 
-class Online_Config {
-public:
-    const Online_Params& get() const { return params_; }
-    void set(const Online_Params& new_params) { params_ = new_params; }
+// class Online_Config {
+// public:
+//     const Online_Params& get() const { return params_; }
+//     void set(const Online_Params& new_params) { params_ = new_params; }
 
-private:
-    Online_Params params_;
-};
+// private:
+//     Online_Params params_;
+// };
 

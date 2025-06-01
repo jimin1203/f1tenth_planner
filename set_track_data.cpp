@@ -43,7 +43,7 @@ int main() {
     rapidcsv::Document csv("inputs/gtpl_levine.csv",
                             rapidcsv::LabelParams(0, -1),
                             rapidcsv::SeparatorParams(';'));
-
+    
     Track data;
     data.x_ref = csv.GetColumn<double>("x_ref_m");
     data.y_ref = csv.GetColumn<double>(" y_ref_m");
