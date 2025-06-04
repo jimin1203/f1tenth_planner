@@ -2,79 +2,48 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include "makeCSV.hpp"
 
 using namespace std;
 
-struct Track {
-    vector<vector<double>> refline;
-    vector<vector<double>> normvec;
-    vector<vector<double>> bound_r;
-    vector<vector<double>> bound_l;
-    vector<vector<double>> raceline;
-
-    vector<double> x_ref;
-    vector<double> y_ref;
-    vector<double> width_right;
-    vector<double> width_left;
-    vector<double> x_normvec;
-    vector<double> y_normvec;
-    vector<double> alpha;
-};
-
-void makeCSVFile2D(const string& filename, const vector<vector<double>>& data) {
-    ofstream file("inputs/glob_inputs/" + filename + ".csv");
-    if (!file.is_open()) {
-        cout << "파일을 열 수 없습니다." << endl;
-        return;
-    }
-
-    for (const auto& row : data) {
-        for (size_t i = 0; i < row.size(); ++i) {
-            file << row[i];
-            if (i != row.size() - 1) file << ',';  // 쉼표로 구분
-        }
-        file << '\n';
-    }
-
-    file.close();
-}
 
 int main() {
     rapidcsv::Document csv("inputs/gtpl_levine.csv",
                             rapidcsv::LabelParams(0, -1),
                             rapidcsv::SeparatorParams(';'));
-    
-    Track data;
-    data.x_ref = csv.GetColumn<double>("x_ref_m");
-    data.y_ref = csv.GetColumn<double>(" y_ref_m");
-    data.width_right = csv.GetColumn<double>(" width_right_m");
-    data.width_left = csv.GetColumn<double>(" width_left_m");
-    data.x_normvec = csv.GetColumn<double>(" x_normvec_m");
-    data.y_normvec = csv.GetColumn<double>(" y_normvec_m");
-    data.alpha = csv.GetColumn<double>(" alpha_m");
+    vector<int> idx = {0, 1, 2, 3, 4, 5, 6};
+    vector<vector<double>> cols = readCSV("selected_data", idx);
 
-    for (size_t i = 0; i < data.x_ref.size(); ++i) {
+    vector<vector<double>> refline, raceline, bound_r, bound_l;
+    // 0번 x_ref 
+    // 1번 y_ref
+    // 2번 width_right 
+    // 3번 width_left 
+    // 4번 x_normvec 
+    // 5번 y_normvec 
+    // 6번 alpha 
+
+    for (size_t i = 0; i < cols[0].size(); ++i) {
         
-        data.refline.push_back({data.x_ref[i], data.y_ref[i]});
-        data.normvec.push_back({data.x_normvec[i], data.x_normvec[i]});
+        refline.push_back({cols[0][i], cols[1][i]});
 
-        double br_x = data.x_ref[i] + data.x_normvec[i] * data.width_right[i];
-        double br_y = data.y_ref[i] + data.y_normvec[i] * data.width_right[i];
-        data.bound_r.push_back({br_x, br_y});
+        double br_x = cols[0][i] + cols[4][i] * cols[2][i];
+        double br_y = cols[1][i] + cols[5][i] * cols[2][i];
+        bound_r.push_back({br_x, br_y});
 
-        double bl_x = data.x_ref[i] - data.x_normvec[i] * data.width_left[i];
-        double bl_y = data.y_ref[i] - data.y_normvec[i] * data.width_left[i];
-        data.bound_l.push_back({bl_x, bl_y});
+        double bl_x = cols[0][i] - cols[4][i] * cols[3][i];
+        double bl_y = cols[1][i] - cols[5][i] * cols[3][i];
+        bound_l.push_back({bl_x, bl_y});
 
-        double rx = data.x_ref[i] + data.x_normvec[i] * data.alpha[i];
-        double ry = data.y_ref[i] + data.y_normvec[i] * data.alpha[i];
-        data.raceline.push_back({rx, ry});
+        double rx = cols[0][i] + cols[4][i] * cols[6][i];
+        double ry = cols[1][i] + cols[5][i] * cols[6][i];
+        raceline.push_back({rx, ry});
     }
 
-    makeCSVFile2D("refline", data.refline);
-    makeCSVFile2D("raceline", data.raceline);
-    makeCSVFile2D("bound_r", data.bound_r);
-    makeCSVFile2D("bound_l", data.bound_l);
+    makeCSV_XY("refline", refline);
+    makeCSV_XY("raceline", raceline);
+    makeCSV_XY("bound_r", bound_r);
+    makeCSV_XY("bound_l", bound_l);
 
     return 0;
 }

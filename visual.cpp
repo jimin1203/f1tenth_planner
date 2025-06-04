@@ -1,11 +1,15 @@
+#define _USE_MATH_DEFINES
+#include <cmath>
+#include "include/matplotlibcpp.h"
+
+namespace plt = matplotlibcpp;
+
+#if 1
 #include <fstream>
 #include <vector>
 #include <string>
 #include <sstream>
 #include <iostream>
-#include "include/qcustomplot.h"
-#include <QApplication>
-#include <QMainWindow>
 
 using namespace std;
 
@@ -33,37 +37,69 @@ bool readXYcsv(const string& filename, vector<double>& xs, vector<double>& ys)
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
-
     vector<double> x_left, y_left;
     vector<double> x_right, y_right;
+    vector<double> x_refline, y_refline;
+    vector<double> x_raceline, y_raceline;
+    vector<double> x_sampling, y_sampling;
 
-    if (!readXYcsv("bound_l.csv", x_left, y_left)) return -1;
-    if (!readXYcsv("bound_r.csv", x_right, y_right)) return -1;
+    if (!readXYcsv("inputs/glob_inputs/bound_l.csv", x_left, y_left)) return -1;
+    if (!readXYcsv("inputs/glob_inputs/bound_r.csv", x_right, y_right)) return -1;
+    if (!readXYcsv("inputs/glob_inputs/refline.csv", x_refline, y_refline)) return -1;
+    if (!readXYcsv("inputs/glob_inputs/raceline.csv", x_raceline, y_raceline)) return -1;
+    if (!readXYcsv("inputs/glob_inputs/sampling_xy.csv", x_sampling, y_sampling)) return -1;
 
-    QMainWindow window;
-    QCustomPlot *customPlot = new QCustomPlot();
+	// Clear previous plot
+	plt::clf();
 
-    // 왼쪽 경계선 그래프 추가
-    customPlot->addGraph();
-    customPlot->graph(0)->setPen(QPen(Qt::blue));  // 파란색
-    customPlot->graph(0)->setData(QVector<double>::fromStdVector(x_left),
-                                 QVector<double>::fromStdVector(y_left));
+	// Plot line from given x and y data. Color is selected automatically.
+	plt::plot(x_left, y_left, {{"color", "black"}});
+	plt::plot(x_right, y_right, {{"color", "black"}});
+    plt::plot(x_refline, y_refline, {{"color", "blue"}});
+    plt::plot(x_raceline, y_raceline, {{"color", "red"}});
+    plt::scatter(x_sampling, y_sampling, 40.0, {{"color", "pink"}});
 
-    // 오른쪽 경계선 그래프 추가
-    customPlot->addGraph();
-    customPlot->graph(1)->setPen(QPen(Qt::red));  // 빨간색
-    customPlot->graph(1)->setData(QVector<double>::fromStdVector(x_right),
-                                 QVector<double>::fromStdVector(y_right));
+	plt::title("Track");
+    plt::grid(true);
+	plt::axis("equal");
+	plt::show();
 
-    customPlot->xAxis->setLabel("X [m]");
-    customPlot->yAxis->setLabel("Y [m]");
-    customPlot->rescaleAxes();
-    customPlot->replot();
-
-    window.setCentralWidget(customPlot);
-    window.resize(800, 600);
-    window.show();
-
-    return app.exec();
+	return 0;
 }
+#endif
+
+
+
+
+#if 0
+int main()
+{
+	int n = 1000;
+	std::vector<double> x, y, z;
+
+	for(int i=0; i<n; i++) {
+		x.push_back(i*i);
+		y.push_back(sin(2*M_PI*i/360.0));
+		z.push_back(log(i));
+
+		if (i % 10 == 0) {
+			// Clear previous plot
+			plt::clf();
+			// Plot line from given x and y data. Color is selected automatically.
+			plt::plot(x, y);
+			// Plot a line whose name will show up as "log(x)" in the legend.
+			plt::named_plot("log(x)", x, z);
+
+			// Set x-axis to interval [0,1000000]
+			plt::xlim(0, n*n);
+
+			// Add graph title
+			plt::title("Sample figure");
+			// Enable legend.
+			plt::legend();
+			// Display plot continuously
+			plt::pause(0.01);
+		}
+	}
+}
+#endif 
