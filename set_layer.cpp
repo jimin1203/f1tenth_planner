@@ -49,26 +49,26 @@ vector<int> variable_step_size(const vector<double>& kappa,
 }
 
 int main() {
-    rapidcsv::Document kappa_c("inputs/glob_inputs/kappa_racetraj_radpm.csv",
-                                rapidcsv::LabelParams(-1, -1));
-    rapidcsv::Document s_raceline_c("inputs/glob_inputs/s_racetraj_m.csv", 
-                                rapidcsv::LabelParams(-1, -1));
-    rapidcsv::Document raceline_c("inputs/glob_inputs/raceline.csv",
-                                rapidcsv::LabelParams(-1, -1));
+    vector<double>& kappa = multiColumns[__kappa];
+    vector<double>& s_traj = multiColumns[__s_racetraj];
+    vector<double>& x_raceline = multiColumns[__x_raceline];
+    vector<double>& y_raceline = multiColumns[__y_raceline];
 
-    vector<double> kappa = kappa_c.GetColumn<double>(0);
-    vector<double> s_raceline = s_raceline_c.GetColumn<double>(0);
     // 구간별 s 저장 
     vector<double> delta_s;
-    for (size_t i = 0; i < s_raceline.size()-1; ++i) {
+    // 예외처리
+    if (x_raceline.size() != y_raceline.size()) throw length_error("raceline 길이가 다름.");
+
+    for (size_t i = 0; i < s_traj.size()-1; ++i) {
         // if (i==0) delta_s.push_back(0);
-        delta_s.push_back(s_raceline[i+1] - s_raceline[i]);
+        delta_s.push_back(s_traj[i+1] - s_traj[i]);
     }
 
-    // cout << delta_s.size() << endl;
-    // for (size_t i = 0; i < 5; ++i)
-    //       cout << "delta_s["<< i<< "]" << fixed << setprecision(7) << delta_s[i] << endl;
-
+    cout << delta_s.size() << endl;
+    for (size_t i = 0; i < 5; ++i)
+          cout << "delta_s["<< i<< "]" << fixed << setprecision(7) << delta_s[i] << endl;
+    
+    #if 0
     vector<double> rx = raceline_c.GetColumn<double>(0);
     vector<double> ry = raceline_c.GetColumn<double>(1);
     
@@ -105,7 +105,7 @@ int main() {
         y_sample.push_back(ry[i]);
     }
 
-    addCSV_XY("sampling_xy", x_sample, y_sample);
-
+    // addCSV_XY("sampling_xy", x_sample, y_sample);
+    #endif
  return 0;
 }

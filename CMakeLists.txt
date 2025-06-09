@@ -43,13 +43,13 @@ add_executable(visual visual.cpp)
 target_link_libraries(visual PRIVATE matplotlib_cpp)
 set_target_properties(visual PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
-add_executable(set_track_data set_track_data.cpp makeCSV.hpp)
+add_executable(set_track_data set_track_data.cpp makeCSV.cpp)
 set_target_properties(set_track_data PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 # add_executable(makeCSV makeCSV.cpp)
 # set_target_properties(makeCSV PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
-add_executable(set_layer set_layer.cpp makeCSV.hpp)
+add_executable(set_layer set_layer.cpp makeCSV.cpp)
 set_target_properties(set_layer PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 # Install headers

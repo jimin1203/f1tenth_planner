@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
     vector<double> x_raceline, y_raceline;
     vector<double> x_sampling, y_sampling;
 
+	
     if (!readXYcsv("inputs/glob_inputs/bound_l.csv", x_left, y_left)) return -1;
     if (!readXYcsv("inputs/glob_inputs/bound_r.csv", x_right, y_right)) return -1;
     if (!readXYcsv("inputs/glob_inputs/refline.csv", x_refline, y_refline)) return -1;

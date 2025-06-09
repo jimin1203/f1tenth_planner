@@ -200,6 +200,33 @@ set_layer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/build
 .PHONY : set_layer/fast
 
+makeCSV.o: makeCSV.cpp.o
+.PHONY : makeCSV.o
+
+# target to build an object file
+makeCSV.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/makeCSV.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/makeCSV.cpp.o
+.PHONY : makeCSV.cpp.o
+
+makeCSV.i: makeCSV.cpp.i
+.PHONY : makeCSV.i
+
+# target to preprocess a source file
+makeCSV.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/makeCSV.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/makeCSV.cpp.i
+.PHONY : makeCSV.cpp.i
+
+makeCSV.s: makeCSV.cpp.s
+.PHONY : makeCSV.s
+
+# target to generate assembly for a file
+makeCSV.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/makeCSV.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/makeCSV.cpp.s
+.PHONY : makeCSV.cpp.s
+
 set_layer.o: set_layer.cpp.o
 .PHONY : set_layer.o
 
@@ -287,6 +314,9 @@ help:
 	@echo "... set_layer"
 	@echo "... set_track_data"
 	@echo "... visual"
+	@echo "... makeCSV.o"
+	@echo "... makeCSV.i"
+	@echo "... makeCSV.s"
 	@echo "... set_layer.o"
 	@echo "... set_layer.i"
 	@echo "... set_layer.s"
