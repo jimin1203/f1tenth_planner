@@ -1,5 +1,4 @@
 /home/jimin1203/misys/f1tenth_planner/CMakeFiles/visual.dir
-/home/jimin1203/misys/f1tenth_planner/CMakeFiles/set_track_data.dir
 /home/jimin1203/misys/f1tenth_planner/CMakeFiles/set_layer.dir
 /home/jimin1203/misys/f1tenth_planner/CMakeFiles/edit_cache.dir
 /home/jimin1203/misys/f1tenth_planner/CMakeFiles/rebuild_cache.dir

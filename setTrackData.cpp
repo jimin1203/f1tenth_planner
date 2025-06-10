@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void computeXY(
+void computeOffsetXY(
     const string& alpha, int sign,
     const string& out_x_name, const string& out_y_name
 ) {
@@ -22,17 +22,12 @@ void computeXY(
     multiColumns[out_y_name] = y_out;
 }
 
-int main() {
-    rapidcsv::Document csv("inputs/gtpl_levine.csv",
-                            rapidcsv::LabelParams(0, -1),
-                            rapidcsv::SeparatorParams(';'));
-    
+void setTrackData(rapidcsv::Document& csv) {
+
     readCSV(csv, multiColumns);
 
-    // 연산 총 3O(N)번 돌아감.
-    computeXY(__width_right, +1, "x_bound_r", "y_bound_r");
-    computeXY(__width_left, -1, "x_bound_l", "y_bound_l");
-    computeXY(__alpha, +1, "x_raceline", "y_raceline");
+    computeOffsetXY(__width_right, +1, "x_bound_r", "y_bound_r");
+    computeOffsetXY(__width_left, -1, "x_bound_l", "y_bound_l");
+    computeOffsetXY(__alpha, +1, "x_raceline", "y_raceline");
 
-    return 0;
 }

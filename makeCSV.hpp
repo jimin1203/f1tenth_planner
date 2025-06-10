@@ -18,6 +18,10 @@
 #define __s_racetraj " s_racetraj_m"
 #define __x_raceline "x_raceline"
 #define __y_raceline "y_raceline"
+#define __x_bound_r "x_bound_r"
+#define __y_bound_r "y_bound_r"
+#define __x_bound_l "x_bound_l"
+#define __y_bound_l "y_bound_l"
 
 using namespace std;
 
@@ -26,3 +30,8 @@ extern map<string, vector<double> > multiColumns;
 void makeCSV(const string& filename, const vector<double>& data);
 void writeCSV(const string& filename, const map<string, vector<double>>& data, char delimiter);
 void readCSV(rapidcsv::Document& csv, map<string, vector<double> >& multiColumns);
+
+void computeOffsetXY(const string& alpha, int sign,
+                    const string& out_x_name, const string& out_y_name);
+
+void setTrackData(rapidcsv::Document& csv);

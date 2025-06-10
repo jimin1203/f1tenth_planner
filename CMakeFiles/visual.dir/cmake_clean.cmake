@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/visual.dir/makeCSV.cpp.o"
+  "CMakeFiles/visual.dir/makeCSV.cpp.o.d"
+  "CMakeFiles/visual.dir/setTrackData.cpp.o"
+  "CMakeFiles/visual.dir/setTrackData.cpp.o.d"
   "CMakeFiles/visual.dir/visual.cpp.o"
   "CMakeFiles/visual.dir/visual.cpp.o.d"
   "bin/visual"

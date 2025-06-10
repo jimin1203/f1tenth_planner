@@ -2,6 +2,7 @@
 #include <cmath>
 #include "include/matplotlibcpp.h"
 
+
 namespace plt = matplotlibcpp;
 
 #if 1
@@ -10,6 +11,8 @@ namespace plt = matplotlibcpp;
 #include <string>
 #include <sstream>
 #include <iostream>
+#include "makeCSV.hpp"
+#include "include/rapidcsv.h"
 
 using namespace std;
 
@@ -37,6 +40,7 @@ bool readXYcsv(const string& filename, vector<double>& xs, vector<double>& ys)
 
 int main(int argc, char *argv[])
 {
+	#if 0
     vector<double> x_left, y_left;
     vector<double> x_right, y_right;
     vector<double> x_refline, y_refline;
@@ -49,16 +53,22 @@ int main(int argc, char *argv[])
     if (!readXYcsv("inputs/glob_inputs/refline.csv", x_refline, y_refline)) return -1;
     if (!readXYcsv("inputs/glob_inputs/raceline.csv", x_raceline, y_raceline)) return -1;
     if (!readXYcsv("inputs/glob_inputs/sampling_xy.csv", x_sampling, y_sampling)) return -1;
+	#endif
+	rapidcsv::Document csv("inputs/gtpl_levine.csv",
+						rapidcsv::LabelParams(0, -1),
+						rapidcsv::SeparatorParams(';'));
+
+	setTrackData(csv);
 
 	// Clear previous plot
 	plt::clf();
 
 	// Plot line from given x and y data. Color is selected automatically.
-	plt::plot(x_left, y_left, {{"color", "black"}});
-	plt::plot(x_right, y_right, {{"color", "black"}});
-    plt::plot(x_refline, y_refline, {{"color", "blue"}});
-    plt::plot(x_raceline, y_raceline, {{"color", "red"}});
-    plt::scatter(x_sampling, y_sampling, 40.0, {{"color", "pink"}});
+	plt::plot(multiColumns[__x_bound_l], multiColumns[__y_bound_l], {{"color", "black"}});
+	plt::plot(multiColumns[__x_bound_r], multiColumns[__y_bound_r], {{"color", "black"}});
+    plt::plot(multiColumns[__x_ref], multiColumns[__y_ref], {{"color", "blue"}});
+    plt::plot(multiColumns[__x_raceline], multiColumns[__y_raceline], {{"color", "red"}});
+    // plt::scatter(x_sampling, y_sampling, 40.0, {{"color", "pink"}});
 
 	plt::title("Track");
     plt::grid(true);

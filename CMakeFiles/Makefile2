@@ -64,7 +64,6 @@ CMAKE_BINARY_DIR = /home/jimin1203/misys/f1tenth_planner
 
 # The main recursive "all" target.
 all: CMakeFiles/visual.dir/all
-all: CMakeFiles/set_track_data.dir/all
 all: CMakeFiles/set_layer.dir/all
 .PHONY : all
 
@@ -74,7 +73,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/visual.dir/clean
-clean: CMakeFiles/set_track_data.dir/clean
 clean: CMakeFiles/set_layer.dir/clean
 .PHONY : clean
 
@@ -85,12 +83,12 @@ clean: CMakeFiles/set_layer.dir/clean
 CMakeFiles/visual.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=7,8 "Built target visual"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=4,5,6,7 "Built target visual"
 .PHONY : CMakeFiles/visual.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/visual.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jimin1203/misys/f1tenth_planner/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jimin1203/misys/f1tenth_planner/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/visual.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jimin1203/misys/f1tenth_planner/CMakeFiles 0
 .PHONY : CMakeFiles/visual.dir/rule
@@ -103,32 +101,6 @@ visual: CMakeFiles/visual.dir/rule
 CMakeFiles/visual.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/clean
 .PHONY : CMakeFiles/visual.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/set_track_data.dir
-
-# All Build rule for target.
-CMakeFiles/set_track_data.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=4,5,6 "Built target set_track_data"
-.PHONY : CMakeFiles/set_track_data.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/set_track_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jimin1203/misys/f1tenth_planner/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/set_track_data.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jimin1203/misys/f1tenth_planner/CMakeFiles 0
-.PHONY : CMakeFiles/set_track_data.dir/rule
-
-# Convenience name for target.
-set_track_data: CMakeFiles/set_track_data.dir/rule
-.PHONY : set_track_data
-
-# clean rule for target.
-CMakeFiles/set_track_data.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/clean
-.PHONY : CMakeFiles/set_track_data.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/set_layer.dir

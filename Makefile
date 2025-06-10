@@ -175,19 +175,6 @@ visual/fast:
 .PHONY : visual/fast
 
 #=============================================================================
-# Target rules for targets named set_track_data
-
-# Build rule for target.
-set_track_data: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 set_track_data
-.PHONY : set_track_data
-
-# fast build rule for target.
-set_track_data/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/build
-.PHONY : set_track_data/fast
-
-#=============================================================================
 # Target rules for targets named set_layer
 
 # Build rule for target.
@@ -205,7 +192,7 @@ makeCSV.o: makeCSV.cpp.o
 
 # target to build an object file
 makeCSV.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/makeCSV.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/makeCSV.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/makeCSV.cpp.o
 .PHONY : makeCSV.cpp.o
 
@@ -214,7 +201,7 @@ makeCSV.i: makeCSV.cpp.i
 
 # target to preprocess a source file
 makeCSV.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/makeCSV.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/makeCSV.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/makeCSV.cpp.i
 .PHONY : makeCSV.cpp.i
 
@@ -223,9 +210,33 @@ makeCSV.s: makeCSV.cpp.s
 
 # target to generate assembly for a file
 makeCSV.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/makeCSV.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/makeCSV.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/makeCSV.cpp.s
 .PHONY : makeCSV.cpp.s
+
+setTrackData.o: setTrackData.cpp.o
+.PHONY : setTrackData.o
+
+# target to build an object file
+setTrackData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/setTrackData.cpp.o
+.PHONY : setTrackData.cpp.o
+
+setTrackData.i: setTrackData.cpp.i
+.PHONY : setTrackData.i
+
+# target to preprocess a source file
+setTrackData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/setTrackData.cpp.i
+.PHONY : setTrackData.cpp.i
+
+setTrackData.s: setTrackData.cpp.s
+.PHONY : setTrackData.s
+
+# target to generate assembly for a file
+setTrackData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/setTrackData.cpp.s
+.PHONY : setTrackData.cpp.s
 
 set_layer.o: set_layer.cpp.o
 .PHONY : set_layer.o
@@ -250,30 +261,6 @@ set_layer.s: set_layer.cpp.s
 set_layer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/set_layer.cpp.s
 .PHONY : set_layer.cpp.s
-
-set_track_data.o: set_track_data.cpp.o
-.PHONY : set_track_data.o
-
-# target to build an object file
-set_track_data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/set_track_data.cpp.o
-.PHONY : set_track_data.cpp.o
-
-set_track_data.i: set_track_data.cpp.i
-.PHONY : set_track_data.i
-
-# target to preprocess a source file
-set_track_data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/set_track_data.cpp.i
-.PHONY : set_track_data.cpp.i
-
-set_track_data.s: set_track_data.cpp.s
-.PHONY : set_track_data.s
-
-# target to generate assembly for a file
-set_track_data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_track_data.dir/build.make CMakeFiles/set_track_data.dir/set_track_data.cpp.s
-.PHONY : set_track_data.cpp.s
 
 visual.o: visual.cpp.o
 .PHONY : visual.o
@@ -312,17 +299,16 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... set_layer"
-	@echo "... set_track_data"
 	@echo "... visual"
 	@echo "... makeCSV.o"
 	@echo "... makeCSV.i"
 	@echo "... makeCSV.s"
+	@echo "... setTrackData.o"
+	@echo "... setTrackData.i"
+	@echo "... setTrackData.s"
 	@echo "... set_layer.o"
 	@echo "... set_layer.i"
 	@echo "... set_layer.s"
-	@echo "... set_track_data.o"
-	@echo "... set_track_data.i"
-	@echo "... set_track_data.s"
 	@echo "... visual.o"
 	@echo "... visual.i"
 	@echo "... visual.s"
