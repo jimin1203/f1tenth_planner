@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/jimin1203/misys/f1tenth_planner/include
 
 CXX_FLAGS = 
 

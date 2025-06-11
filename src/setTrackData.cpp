@@ -1,10 +1,5 @@
-#include "include/rapidcsv.h"
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include "makeCSV.hpp"
+#include "setTrackData.hpp"
 
-using namespace std;
 
 void computeOffsetXY(
     const string& alpha, int sign,
@@ -22,12 +17,19 @@ void computeOffsetXY(
     multiColumns[out_y_name] = y_out;
 }
 
-void setTrackData(rapidcsv::Document& csv) {
+void setTrackData(Document& csv) {
 
     readCSV(csv, multiColumns);
 
     computeOffsetXY(__width_right, +1, "x_bound_r", "y_bound_r");
     computeOffsetXY(__width_left, -1, "x_bound_l", "y_bound_l");
     computeOffsetXY(__alpha, +1, "x_raceline", "y_raceline");
+
+    vector<double>& s_racetraj = multiColumns[__s_racetraj];
+    // 구간별 s 저장     
+    for (size_t i = 0; i < multiColumns[__s_racetraj].size()-1; ++i) {
+        // if (i==0) delta_s.push_back(0);
+        multiColumns[__delta_s].push_back(s_racetraj[i+1] - s_racetraj[i]);
+    }
 
 }

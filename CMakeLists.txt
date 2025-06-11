@@ -38,8 +38,15 @@ install(
   EXPORT install_targets
 )
 
-# Examples
-add_executable(visual visual.cpp makeCSV.cpp setTrackData.cpp)
+# include 경로 설정 
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+# visual
+add_executable(visual
+    src/visual.cpp
+    src/makeCSV.cpp
+    src/setTrackData.cpp
+)
 target_link_libraries(visual PRIVATE matplotlib_cpp)
 set_target_properties(visual PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
@@ -49,7 +56,12 @@ set_target_properties(visual PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY
 # add_executable(makeCSV makeCSV.cpp)
 # set_target_properties(makeCSV PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
-add_executable(set_layer set_layer.cpp makeCSV.cpp )
+# set_layer
+add_executable(set_layer
+    src/set_layer.cpp
+    src/makeCSV.cpp
+    src/setTrackData.cpp
+)
 set_target_properties(set_layer PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 # Install headers
@@ -72,7 +84,7 @@ install(EXPORT install_targets
 include(CMakePackageConfigHelpers)
 configure_package_config_file(
   ${CMAKE_CURRENT_SOURCE_DIR}/cmake/${PACKAGE_NAME}Config.cmake.in
-  ${CMAKE_CURRENT_BINARY_DIR}/${PACKAGE_NAME}Config.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/cmake/${PACKAGE_NAME}Config.cmake
   INSTALL_DESTINATION ${INSTALL_CONFIGDIR}
 )
 install(FILES

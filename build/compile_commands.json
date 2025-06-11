@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/jimin1203/misys/f1tenth_planner/build",
+  "command": "/usr/bin/g++  -I/home/jimin1203/misys/f1tenth_planner/include -isystem /usr/include/python3.10 -isystem /home/jimin1203/.local/lib/python3.10/site-packages/numpy/_core/include -g -o CMakeFiles/visual.dir/src/visual.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/visual.cpp",
+  "file": "/home/jimin1203/misys/f1tenth_planner/src/visual.cpp"
+},
+{
+  "directory": "/home/jimin1203/misys/f1tenth_planner/build",
+  "command": "/usr/bin/g++  -I/home/jimin1203/misys/f1tenth_planner/include -isystem /usr/include/python3.10 -isystem /home/jimin1203/.local/lib/python3.10/site-packages/numpy/_core/include -g -o CMakeFiles/visual.dir/src/makeCSV.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp",
+  "file": "/home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp"
+},
+{
+  "directory": "/home/jimin1203/misys/f1tenth_planner/build",
+  "command": "/usr/bin/g++  -I/home/jimin1203/misys/f1tenth_planner/include -isystem /usr/include/python3.10 -isystem /home/jimin1203/.local/lib/python3.10/site-packages/numpy/_core/include -g -o CMakeFiles/visual.dir/src/setTrackData.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp",
+  "file": "/home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp"
+},
+{
+  "directory": "/home/jimin1203/misys/f1tenth_planner/build",
+  "command": "/usr/bin/g++  -I/home/jimin1203/misys/f1tenth_planner/include -g -o CMakeFiles/set_layer.dir/src/set_layer.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/set_layer.cpp",
+  "file": "/home/jimin1203/misys/f1tenth_planner/src/set_layer.cpp"
+},
+{
+  "directory": "/home/jimin1203/misys/f1tenth_planner/build",
+  "command": "/usr/bin/g++  -I/home/jimin1203/misys/f1tenth_planner/include -g -o CMakeFiles/set_layer.dir/src/makeCSV.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp",
+  "file": "/home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp"
+},
+{
+  "directory": "/home/jimin1203/misys/f1tenth_planner/build",
+  "command": "/usr/bin/g++  -I/home/jimin1203/misys/f1tenth_planner/include -g -o CMakeFiles/set_layer.dir/src/setTrackData.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp",
+  "file": "/home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp"
+}
+]

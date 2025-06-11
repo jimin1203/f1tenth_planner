@@ -1,7 +1,5 @@
 #include "makeCSV.hpp"
 
-using namespace std;
-
 map<string, vector<double> > multiColumns;
 
 void makeCSV(const string& filename, const vector<double>& data) {

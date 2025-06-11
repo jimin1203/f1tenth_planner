@@ -69,47 +69,63 @@ include CMakeFiles/set_layer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/set_layer.dir/flags.make
 
-CMakeFiles/set_layer.dir/set_layer.cpp.o: CMakeFiles/set_layer.dir/flags.make
-CMakeFiles/set_layer.dir/set_layer.cpp.o: set_layer.cpp
-CMakeFiles/set_layer.dir/set_layer.cpp.o: CMakeFiles/set_layer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/set_layer.dir/set_layer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set_layer.dir/set_layer.cpp.o -MF CMakeFiles/set_layer.dir/set_layer.cpp.o.d -o CMakeFiles/set_layer.dir/set_layer.cpp.o -c /home/jimin1203/misys/f1tenth_planner/set_layer.cpp
+CMakeFiles/set_layer.dir/src/set_layer.cpp.o: CMakeFiles/set_layer.dir/flags.make
+CMakeFiles/set_layer.dir/src/set_layer.cpp.o: src/set_layer.cpp
+CMakeFiles/set_layer.dir/src/set_layer.cpp.o: CMakeFiles/set_layer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/set_layer.dir/src/set_layer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set_layer.dir/src/set_layer.cpp.o -MF CMakeFiles/set_layer.dir/src/set_layer.cpp.o.d -o CMakeFiles/set_layer.dir/src/set_layer.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/set_layer.cpp
 
-CMakeFiles/set_layer.dir/set_layer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_layer.dir/set_layer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/set_layer.cpp > CMakeFiles/set_layer.dir/set_layer.cpp.i
+CMakeFiles/set_layer.dir/src/set_layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_layer.dir/src/set_layer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/src/set_layer.cpp > CMakeFiles/set_layer.dir/src/set_layer.cpp.i
 
-CMakeFiles/set_layer.dir/set_layer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_layer.dir/set_layer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/set_layer.cpp -o CMakeFiles/set_layer.dir/set_layer.cpp.s
+CMakeFiles/set_layer.dir/src/set_layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_layer.dir/src/set_layer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/src/set_layer.cpp -o CMakeFiles/set_layer.dir/src/set_layer.cpp.s
 
-CMakeFiles/set_layer.dir/makeCSV.cpp.o: CMakeFiles/set_layer.dir/flags.make
-CMakeFiles/set_layer.dir/makeCSV.cpp.o: makeCSV.cpp
-CMakeFiles/set_layer.dir/makeCSV.cpp.o: CMakeFiles/set_layer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/set_layer.dir/makeCSV.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set_layer.dir/makeCSV.cpp.o -MF CMakeFiles/set_layer.dir/makeCSV.cpp.o.d -o CMakeFiles/set_layer.dir/makeCSV.cpp.o -c /home/jimin1203/misys/f1tenth_planner/makeCSV.cpp
+CMakeFiles/set_layer.dir/src/makeCSV.cpp.o: CMakeFiles/set_layer.dir/flags.make
+CMakeFiles/set_layer.dir/src/makeCSV.cpp.o: src/makeCSV.cpp
+CMakeFiles/set_layer.dir/src/makeCSV.cpp.o: CMakeFiles/set_layer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/set_layer.dir/src/makeCSV.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set_layer.dir/src/makeCSV.cpp.o -MF CMakeFiles/set_layer.dir/src/makeCSV.cpp.o.d -o CMakeFiles/set_layer.dir/src/makeCSV.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp
 
-CMakeFiles/set_layer.dir/makeCSV.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_layer.dir/makeCSV.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/makeCSV.cpp > CMakeFiles/set_layer.dir/makeCSV.cpp.i
+CMakeFiles/set_layer.dir/src/makeCSV.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_layer.dir/src/makeCSV.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp > CMakeFiles/set_layer.dir/src/makeCSV.cpp.i
 
-CMakeFiles/set_layer.dir/makeCSV.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_layer.dir/makeCSV.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/makeCSV.cpp -o CMakeFiles/set_layer.dir/makeCSV.cpp.s
+CMakeFiles/set_layer.dir/src/makeCSV.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_layer.dir/src/makeCSV.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp -o CMakeFiles/set_layer.dir/src/makeCSV.cpp.s
+
+CMakeFiles/set_layer.dir/src/setTrackData.cpp.o: CMakeFiles/set_layer.dir/flags.make
+CMakeFiles/set_layer.dir/src/setTrackData.cpp.o: src/setTrackData.cpp
+CMakeFiles/set_layer.dir/src/setTrackData.cpp.o: CMakeFiles/set_layer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/set_layer.dir/src/setTrackData.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/set_layer.dir/src/setTrackData.cpp.o -MF CMakeFiles/set_layer.dir/src/setTrackData.cpp.o.d -o CMakeFiles/set_layer.dir/src/setTrackData.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp
+
+CMakeFiles/set_layer.dir/src/setTrackData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_layer.dir/src/setTrackData.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp > CMakeFiles/set_layer.dir/src/setTrackData.cpp.i
+
+CMakeFiles/set_layer.dir/src/setTrackData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_layer.dir/src/setTrackData.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp -o CMakeFiles/set_layer.dir/src/setTrackData.cpp.s
 
 # Object files for target set_layer
 set_layer_OBJECTS = \
-"CMakeFiles/set_layer.dir/set_layer.cpp.o" \
-"CMakeFiles/set_layer.dir/makeCSV.cpp.o"
+"CMakeFiles/set_layer.dir/src/set_layer.cpp.o" \
+"CMakeFiles/set_layer.dir/src/makeCSV.cpp.o" \
+"CMakeFiles/set_layer.dir/src/setTrackData.cpp.o"
 
 # External object files for target set_layer
 set_layer_EXTERNAL_OBJECTS =
 
-bin/set_layer: CMakeFiles/set_layer.dir/set_layer.cpp.o
-bin/set_layer: CMakeFiles/set_layer.dir/makeCSV.cpp.o
+bin/set_layer: CMakeFiles/set_layer.dir/src/set_layer.cpp.o
+bin/set_layer: CMakeFiles/set_layer.dir/src/makeCSV.cpp.o
+bin/set_layer: CMakeFiles/set_layer.dir/src/setTrackData.cpp.o
 bin/set_layer: CMakeFiles/set_layer.dir/build.make
 bin/set_layer: CMakeFiles/set_layer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/set_layer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/set_layer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/set_layer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

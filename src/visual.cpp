@@ -1,20 +1,14 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
-#include "include/matplotlibcpp.h"
-
-
-namespace plt = matplotlibcpp;
-
-#if 1
 #include <fstream>
 #include <vector>
 #include <string>
 #include <sstream>
 #include <iostream>
-#include "makeCSV.hpp"
-#include "include/rapidcsv.h"
+#include "setTrackData.hpp"
+#include "matplotlibcpp.h"
 
-using namespace std;
+namespace plt = matplotlibcpp;
 
 bool readXYcsv(const string& filename, vector<double>& xs, vector<double>& ys)
 {
@@ -40,35 +34,32 @@ bool readXYcsv(const string& filename, vector<double>& xs, vector<double>& ys)
 
 int main(int argc, char *argv[])
 {
-	#if 0
-    vector<double> x_left, y_left;
-    vector<double> x_right, y_right;
-    vector<double> x_refline, y_refline;
-    vector<double> x_raceline, y_raceline;
-    vector<double> x_sampling, y_sampling;
-
-	
-    if (!readXYcsv("inputs/glob_inputs/bound_l.csv", x_left, y_left)) return -1;
-    if (!readXYcsv("inputs/glob_inputs/bound_r.csv", x_right, y_right)) return -1;
-    if (!readXYcsv("inputs/glob_inputs/refline.csv", x_refline, y_refline)) return -1;
-    if (!readXYcsv("inputs/glob_inputs/raceline.csv", x_raceline, y_raceline)) return -1;
-    if (!readXYcsv("inputs/glob_inputs/sampling_xy.csv", x_sampling, y_sampling)) return -1;
-	#endif
-	rapidcsv::Document csv("inputs/gtpl_levine.csv",
-						rapidcsv::LabelParams(0, -1),
-						rapidcsv::SeparatorParams(';'));
+	Document csv("inputs/gtpl_levine.csv",
+				LabelParams(0, -1),
+				SeparatorParams(';'));
 
 	setTrackData(csv);
 
-	// Clear previous plot
+	ifstream file("inputs/idx_array.txt");
+	int idx;
+
+	if (file.is_open()) {
+		while (file >> idx) {
+			multiColumns[__x_sampling].push_back(multiColumns[__x_raceline][idx]);
+			multiColumns[__y_sampling].push_back(multiColumns[__y_raceline][idx]);
+		}
+		file.close();
+	} else {
+		cerr << "파일 열기 실패" << endl;
+	}
+
 	plt::clf();
 
-	// Plot line from given x and y data. Color is selected automatically.
 	plt::plot(multiColumns[__x_bound_l], multiColumns[__y_bound_l], {{"color", "black"}});
 	plt::plot(multiColumns[__x_bound_r], multiColumns[__y_bound_r], {{"color", "black"}});
     plt::plot(multiColumns[__x_ref], multiColumns[__y_ref], {{"color", "blue"}});
     plt::plot(multiColumns[__x_raceline], multiColumns[__y_raceline], {{"color", "red"}});
-    // plt::scatter(x_sampling, y_sampling, 40.0, {{"color", "pink"}});
+    plt::scatter(multiColumns[__x_sampling], multiColumns[__y_sampling], 40.0, {{"color", "pink"}});
 
 	plt::title("Track");
     plt::grid(true);
@@ -77,7 +68,7 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
-#endif
+
 
 
 

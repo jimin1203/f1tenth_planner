@@ -330,7 +330,8 @@ CMakeFiles/visual.dir/visual.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/jimin1203/misys/f1tenth_planner/makeCSV.hpp \
+ /home/jimin1203/misys/f1tenth_planner/include/setTrackData.hpp \
+ /home/jimin1203/misys/f1tenth_planner/include/makeCSV.hpp \
  /usr/include/c++/11/iomanip /usr/include/c++/11/locale \
  /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
