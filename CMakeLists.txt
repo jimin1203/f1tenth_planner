@@ -38,6 +38,8 @@ install(
   EXPORT install_targets
 )
 
+find_package(Eigen3 REQUIRED)
+
 # include 경로 설정 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
@@ -64,11 +66,14 @@ add_executable(set_layer
 )
 set_target_properties(set_layer PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
+add_executable(gen_spline src/gen_spline.cpp)
+target_link_libraries(gen_spline PRIVATE Eigen3::Eigen)
+set_target_properties(gen_spline PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+
 # Install headers
 install(FILES
   "${PROJECT_SOURCE_DIR}/include/matplotlibcpp.h"
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-
 
 # Install targets file
 install(EXPORT install_targets

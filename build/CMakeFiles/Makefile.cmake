@@ -36,6 +36,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake"
   "/usr/share/cmake-3.22/Modules/WriteBasicConfigVersionFile.cmake"
+  "/usr/share/eigen3/cmake/Eigen3Config.cmake"
+  "/usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake"
+  "/usr/share/eigen3/cmake/Eigen3Targets.cmake"
   )
 
 # The corresponding makefile is:
@@ -54,4 +57,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/visual.dir/DependInfo.cmake"
   "CMakeFiles/set_layer.dir/DependInfo.cmake"
+  "CMakeFiles/gen_spline.dir/DependInfo.cmake"
   )

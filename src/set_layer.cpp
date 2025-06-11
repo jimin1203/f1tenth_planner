@@ -1,7 +1,7 @@
 #include "setTrackData.hpp"
 #include "config.h"
 
-void variable_step_size(const vector<double>& kappa,
+void samplePointsFromRaceline(const vector<double>& kappa,
                         const vector<double>& dist,
                         double d_curve,
                         double d_straight,
@@ -38,7 +38,7 @@ void variable_step_size(const vector<double>& kappa,
 
     ofstream file("inputs/idx_array.txt");
     for (int idx : idx_array) 
-    file << idx << "\n";
+        file << idx << "\n";
 }
 
 int main() {
@@ -50,12 +50,12 @@ int main() {
 	setTrackData(csv);
     vector<int> idx_array;
 
-    variable_step_size(multiColumns[__kappa], 
-                    multiColumns[__delta_s], 
-                    params.LON_CURVE_STEP, 
-                    params.LON_STRAIGHT_STEP,
-                    params.CURVE_THR,
-                    idx_array);
+    samplePointsFromRaceline(multiColumns[__kappa], 
+                            multiColumns[__delta_s], 
+                            params.LON_CURVE_STEP, 
+                            params.LON_STRAIGHT_STEP,
+                            params.CURVE_THR,
+                            idx_array);
 
  return 0;
 }

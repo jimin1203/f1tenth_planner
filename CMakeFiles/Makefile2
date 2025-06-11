@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/jimin1203/misys/f1tenth_planner
 # The main recursive "all" target.
 all: CMakeFiles/visual.dir/all
 all: CMakeFiles/set_layer.dir/all
+all: CMakeFiles/gen_spline.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +75,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/visual.dir/clean
 clean: CMakeFiles/set_layer.dir/clean
+clean: CMakeFiles/gen_spline.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,7 +85,7 @@ clean: CMakeFiles/set_layer.dir/clean
 CMakeFiles/visual.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=5,6,7,8 "Built target visual"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=7,8,9,10 "Built target visual"
 .PHONY : CMakeFiles/visual.dir/all
 
 # Build rule for subdir invocation for target.
@@ -109,7 +111,7 @@ CMakeFiles/visual.dir/clean:
 CMakeFiles/set_layer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=1,2,3,4 "Built target set_layer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=3,4,5,6 "Built target set_layer"
 .PHONY : CMakeFiles/set_layer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,6 +129,32 @@ set_layer: CMakeFiles/set_layer.dir/rule
 CMakeFiles/set_layer.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/clean
 .PHONY : CMakeFiles/set_layer.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gen_spline.dir
+
+# All Build rule for target.
+CMakeFiles/gen_spline.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_spline.dir/build.make CMakeFiles/gen_spline.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_spline.dir/build.make CMakeFiles/gen_spline.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=1,2 "Built target gen_spline"
+.PHONY : CMakeFiles/gen_spline.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gen_spline.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jimin1203/misys/f1tenth_planner/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gen_spline.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jimin1203/misys/f1tenth_planner/CMakeFiles 0
+.PHONY : CMakeFiles/gen_spline.dir/rule
+
+# Convenience name for target.
+gen_spline: CMakeFiles/gen_spline.dir/rule
+.PHONY : gen_spline
+
+# clean rule for target.
+CMakeFiles/gen_spline.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_spline.dir/build.make CMakeFiles/gen_spline.dir/clean
+.PHONY : CMakeFiles/gen_spline.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
