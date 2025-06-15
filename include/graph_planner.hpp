@@ -5,7 +5,9 @@
 #include <vector>
 #include <string>
 #include <iomanip>  
+#include <cmath>
 #include "rapidcsv.h"
+#include "matplotlibcpp.h"
 
 #define __x_ref "x_ref_m"
 #define __y_ref " y_ref_m"
@@ -28,17 +30,24 @@
 
 using namespace std;
 using namespace rapidcsv;
+namespace plt = matplotlibcpp;
 
 // 유지보수를 위하여 typedef로 선언 
 typedef vector<double> DVector;
 typedef vector<int>    IVector;
 typedef map<string, DVector> DMap;
 typedef map<string, IVector> IMap;
+typedef map<DVector, DVector> DDMap;
+
+struct Node {
+    int layer_idx;
+    double x;
+    double y;
+    double psi;
+    double kappa;
+    bool raceline;
+};
 
 void readDmapFromCSV(const string& pathname, DMap& map);
 void writeDMaptoCSV(const string& pathname, const DMap& map, char delimiter);
-
-void map_size(DMap& map);
-void addDVectorToMap(DMap& map, string attr);
-void populateDMapFromCSV(const string& pathname, DMap& map);
 

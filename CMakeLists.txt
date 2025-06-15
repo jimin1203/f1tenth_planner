@@ -43,25 +43,10 @@ find_package(Eigen3 REQUIRED)
 # include 경로 설정 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# visual
-# add_executable(visual
-#     src/visual.cpp
-#     src/main.cpp
-# )
-# target_link_libraries(visual PRIVATE matplotlib_cpp)
-# set_target_properties(visual PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-
 # main
 add_executable(main src/main.cpp)
 target_link_libraries(main PRIVATE matplotlib_cpp)
 set_target_properties(main PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-
-# set_layer
-# add_executable(set_layer
-#     src/set_layer.cpp
-#     src/main.cpp
-# )
-# set_target_properties(set_layer PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 # gen_spline
 add_executable(gen_spline src/gen_spline.cpp)

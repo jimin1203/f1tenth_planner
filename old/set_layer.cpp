@@ -1,11 +1,11 @@
 #include "config.h"
 
-void samplePointsFromRaceline(const vector<double>& kappa,
-                        const vector<double>& dist,
-                        double d_curve,
-                        double d_straight,
-                        double curve_th,
-                        vector<int>& idx_array) {
+void samplePointsFromRaceline(const vector<double> &kappa,
+                              const vector<double> &dist,
+                              double d_curve,
+                              double d_straight,
+                              double curve_th,
+                              vector<int> &idx_array) {
 
     double next_dist = 0.0;
     double next_dist_min = 0.0;
