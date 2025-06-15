@@ -44,28 +44,26 @@ find_package(Eigen3 REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # visual
-add_executable(visual
-    src/visual.cpp
-    src/makeCSV.cpp
-    src/setTrackData.cpp
-)
-target_link_libraries(visual PRIVATE matplotlib_cpp)
-set_target_properties(visual PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+# add_executable(visual
+#     src/visual.cpp
+#     src/main.cpp
+# )
+# target_link_libraries(visual PRIVATE matplotlib_cpp)
+# set_target_properties(visual PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
-# add_executable(set_track_data set_track_data.cpp makeCSV.cpp)
-# set_target_properties(set_track_data PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-
-# add_executable(makeCSV makeCSV.cpp)
-# set_target_properties(makeCSV PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+# main
+add_executable(main src/main.cpp)
+target_link_libraries(main PRIVATE matplotlib_cpp)
+set_target_properties(main PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 # set_layer
-add_executable(set_layer
-    src/set_layer.cpp
-    src/makeCSV.cpp
-    src/setTrackData.cpp
-)
-set_target_properties(set_layer PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+# add_executable(set_layer
+#     src/set_layer.cpp
+#     src/main.cpp
+# )
+# set_target_properties(set_layer PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
+# gen_spline
 add_executable(gen_spline src/gen_spline.cpp)
 target_link_libraries(gen_spline PRIVATE Eigen3::Eigen)
 set_target_properties(gen_spline PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")

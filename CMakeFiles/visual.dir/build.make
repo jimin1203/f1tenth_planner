@@ -83,50 +83,34 @@ CMakeFiles/visual.dir/src/visual.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/visual.dir/src/visual.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/src/visual.cpp -o CMakeFiles/visual.dir/src/visual.cpp.s
 
-CMakeFiles/visual.dir/src/makeCSV.cpp.o: CMakeFiles/visual.dir/flags.make
-CMakeFiles/visual.dir/src/makeCSV.cpp.o: src/makeCSV.cpp
-CMakeFiles/visual.dir/src/makeCSV.cpp.o: CMakeFiles/visual.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/visual.dir/src/makeCSV.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visual.dir/src/makeCSV.cpp.o -MF CMakeFiles/visual.dir/src/makeCSV.cpp.o.d -o CMakeFiles/visual.dir/src/makeCSV.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp
+CMakeFiles/visual.dir/src/main.cpp.o: CMakeFiles/visual.dir/flags.make
+CMakeFiles/visual.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/visual.dir/src/main.cpp.o: CMakeFiles/visual.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/visual.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visual.dir/src/main.cpp.o -MF CMakeFiles/visual.dir/src/main.cpp.o.d -o CMakeFiles/visual.dir/src/main.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/main.cpp
 
-CMakeFiles/visual.dir/src/makeCSV.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/visual.dir/src/makeCSV.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp > CMakeFiles/visual.dir/src/makeCSV.cpp.i
+CMakeFiles/visual.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/visual.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/src/main.cpp > CMakeFiles/visual.dir/src/main.cpp.i
 
-CMakeFiles/visual.dir/src/makeCSV.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/visual.dir/src/makeCSV.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/src/makeCSV.cpp -o CMakeFiles/visual.dir/src/makeCSV.cpp.s
-
-CMakeFiles/visual.dir/src/setTrackData.cpp.o: CMakeFiles/visual.dir/flags.make
-CMakeFiles/visual.dir/src/setTrackData.cpp.o: src/setTrackData.cpp
-CMakeFiles/visual.dir/src/setTrackData.cpp.o: CMakeFiles/visual.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/visual.dir/src/setTrackData.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/visual.dir/src/setTrackData.cpp.o -MF CMakeFiles/visual.dir/src/setTrackData.cpp.o.d -o CMakeFiles/visual.dir/src/setTrackData.cpp.o -c /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp
-
-CMakeFiles/visual.dir/src/setTrackData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/visual.dir/src/setTrackData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp > CMakeFiles/visual.dir/src/setTrackData.cpp.i
-
-CMakeFiles/visual.dir/src/setTrackData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/visual.dir/src/setTrackData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/src/setTrackData.cpp -o CMakeFiles/visual.dir/src/setTrackData.cpp.s
+CMakeFiles/visual.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/visual.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jimin1203/misys/f1tenth_planner/src/main.cpp -o CMakeFiles/visual.dir/src/main.cpp.s
 
 # Object files for target visual
 visual_OBJECTS = \
 "CMakeFiles/visual.dir/src/visual.cpp.o" \
-"CMakeFiles/visual.dir/src/makeCSV.cpp.o" \
-"CMakeFiles/visual.dir/src/setTrackData.cpp.o"
+"CMakeFiles/visual.dir/src/main.cpp.o"
 
 # External object files for target visual
 visual_EXTERNAL_OBJECTS =
 
 bin/visual: CMakeFiles/visual.dir/src/visual.cpp.o
-bin/visual: CMakeFiles/visual.dir/src/makeCSV.cpp.o
-bin/visual: CMakeFiles/visual.dir/src/setTrackData.cpp.o
+bin/visual: CMakeFiles/visual.dir/src/main.cpp.o
 bin/visual: CMakeFiles/visual.dir/build.make
 bin/visual: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 bin/visual: CMakeFiles/visual.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/visual"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jimin1203/misys/f1tenth_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/visual"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/visual.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

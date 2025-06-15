@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-d7e2e60d24d09340a4a6.json",
+					"jsonFile" : "directory-.-Debug-3d8c013fdd58ca7726ce.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.8"
@@ -17,8 +17,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						1,
-						2
+						1
 					]
 				}
 			],
@@ -34,8 +33,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						1,
-						2
+						1
 					]
 				}
 			],
@@ -44,22 +42,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "gen_spline::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-gen_spline-Debug-40dbbae13861456a5896.json",
+					"jsonFile" : "target-gen_spline-Debug-8622bfaaae0223c91c0a.json",
 					"name" : "gen_spline",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "set_layer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-set_layer-Debug-f733d30ceaf60889989c.json",
-					"name" : "set_layer",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "visual::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-visual-Debug-38e16635abe04e4b1c77.json",
-					"name" : "visual",
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-b58101961884134a7d3e.json",
+					"name" : "main",
 					"projectIndex" : 0
 				}
 			]

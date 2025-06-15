@@ -29,12 +29,16 @@
 using namespace std;
 using namespace rapidcsv;
 
-extern map<string, vector<double> > multiColumns;
+// 유지보수를 위하여 typedef로 선언 
+typedef vector<double> DVector;
+typedef vector<int>    IVector;
+typedef map<string, DVector> DMap;
+typedef map<string, IVector> IMap;
 
-void makeCSV(const string& filename, const vector<double>& data);
-void writeCSV(const string& filename, const map<string, vector<double>>& data, char delimiter);
-void readCSV(Document& csv, map<string, vector<double> >& multiColumns);
+void readDmapFromCSV(const string& pathname, DMap& map);
+void writeDMaptoCSV(const string& pathname, const DMap& map, char delimiter);
 
-void computeOffsetXY(const string& alpha, int sign,
-                    const string& out_x_name, const string& out_y_name);
+void map_size(DMap& map);
+void addDVectorToMap(DMap& map, string attr);
+void populateDMapFromCSV(const string& pathname, DMap& map);
 

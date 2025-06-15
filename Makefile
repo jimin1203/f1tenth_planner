@@ -162,30 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named visual
+# Target rules for targets named main
 
 # Build rule for target.
-visual: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 visual
-.PHONY : visual
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-visual/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/build
-.PHONY : visual/fast
-
-#=============================================================================
-# Target rules for targets named set_layer
-
-# Build rule for target.
-set_layer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 set_layer
-.PHONY : set_layer
-
-# fast build rule for target.
-set_layer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/build
-.PHONY : set_layer/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 #=============================================================================
 # Target rules for targets named gen_spline
@@ -224,107 +211,29 @@ src/gen_spline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_spline.dir/build.make CMakeFiles/gen_spline.dir/src/gen_spline.cpp.s
 .PHONY : src/gen_spline.cpp.s
 
-src/makeCSV.o: src/makeCSV.cpp.o
-.PHONY : src/makeCSV.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-src/makeCSV.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/makeCSV.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/makeCSV.cpp.o
-.PHONY : src/makeCSV.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-src/makeCSV.i: src/makeCSV.cpp.i
-.PHONY : src/makeCSV.i
-
-# target to preprocess a source file
-src/makeCSV.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/makeCSV.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/makeCSV.cpp.i
-.PHONY : src/makeCSV.cpp.i
-
-src/makeCSV.s: src/makeCSV.cpp.s
-.PHONY : src/makeCSV.s
-
-# target to generate assembly for a file
-src/makeCSV.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/makeCSV.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/makeCSV.cpp.s
-.PHONY : src/makeCSV.cpp.s
-
-src/setTrackData.o: src/setTrackData.cpp.o
-.PHONY : src/setTrackData.o
-
-# target to build an object file
-src/setTrackData.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/setTrackData.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/setTrackData.cpp.o
-.PHONY : src/setTrackData.cpp.o
-
-src/setTrackData.i: src/setTrackData.cpp.i
-.PHONY : src/setTrackData.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-src/setTrackData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/setTrackData.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/setTrackData.cpp.i
-.PHONY : src/setTrackData.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-src/setTrackData.s: src/setTrackData.cpp.s
-.PHONY : src/setTrackData.s
-
-# target to generate assembly for a file
-src/setTrackData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/setTrackData.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/setTrackData.cpp.s
-.PHONY : src/setTrackData.cpp.s
-
-src/set_layer.o: src/set_layer.cpp.o
-.PHONY : src/set_layer.o
-
-# target to build an object file
-src/set_layer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/set_layer.cpp.o
-.PHONY : src/set_layer.cpp.o
-
-src/set_layer.i: src/set_layer.cpp.i
-.PHONY : src/set_layer.i
-
-# target to preprocess a source file
-src/set_layer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/set_layer.cpp.i
-.PHONY : src/set_layer.cpp.i
-
-src/set_layer.s: src/set_layer.cpp.s
-.PHONY : src/set_layer.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-src/set_layer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_layer.dir/build.make CMakeFiles/set_layer.dir/src/set_layer.cpp.s
-.PHONY : src/set_layer.cpp.s
-
-src/visual.o: src/visual.cpp.o
-.PHONY : src/visual.o
-
-# target to build an object file
-src/visual.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/visual.cpp.o
-.PHONY : src/visual.cpp.o
-
-src/visual.i: src/visual.cpp.i
-.PHONY : src/visual.i
-
-# target to preprocess a source file
-src/visual.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/visual.cpp.i
-.PHONY : src/visual.cpp.i
-
-src/visual.s: src/visual.cpp.s
-.PHONY : src/visual.s
-
-# target to generate assembly for a file
-src/visual.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/visual.dir/build.make CMakeFiles/visual.dir/src/visual.cpp.s
-.PHONY : src/visual.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -339,23 +248,13 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... gen_spline"
-	@echo "... set_layer"
-	@echo "... visual"
+	@echo "... main"
 	@echo "... src/gen_spline.o"
 	@echo "... src/gen_spline.i"
 	@echo "... src/gen_spline.s"
-	@echo "... src/makeCSV.o"
-	@echo "... src/makeCSV.i"
-	@echo "... src/makeCSV.s"
-	@echo "... src/setTrackData.o"
-	@echo "... src/setTrackData.i"
-	@echo "... src/setTrackData.s"
-	@echo "... src/set_layer.o"
-	@echo "... src/set_layer.i"
-	@echo "... src/set_layer.s"
-	@echo "... src/visual.o"
-	@echo "... src/visual.i"
-	@echo "... src/visual.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

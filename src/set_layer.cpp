@@ -1,4 +1,3 @@
-#include "setTrackData.hpp"
 #include "config.h"
 
 void samplePointsFromRaceline(const vector<double>& kappa,

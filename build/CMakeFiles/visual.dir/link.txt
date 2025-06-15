@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/visual.dir/src/visual.cpp.o CMakeFiles/visual.dir/src/makeCSV.cpp.o CMakeFiles/visual.dir/src/setTrackData.cpp.o -o bin/visual  /usr/lib/x86_64-linux-gnu/libpython3.10.so 
+/usr/bin/g++ -g CMakeFiles/visual.dir/src/visual.cpp.o CMakeFiles/visual.dir/src/main.cpp.o -o bin/visual  /usr/lib/x86_64-linux-gnu/libpython3.10.so 
