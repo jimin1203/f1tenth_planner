@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/set_layer.dir/src/set_layer.cpp.o CMakeFiles/set_layer.dir/src/makeCSV.cpp.o CMakeFiles/set_layer.dir/src/setTrackData.cpp.o -o bin/set_layer 

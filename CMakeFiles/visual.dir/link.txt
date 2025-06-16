@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/visual.dir/src/visual.cpp.o CMakeFiles/visual.dir/src/main.cpp.o -o bin/visual  /usr/lib/x86_64-linux-gnu/libpython3.10.so 

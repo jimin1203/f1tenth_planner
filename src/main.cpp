@@ -177,6 +177,7 @@ int main() {
             x_sampling.push_back(gtpl_map[__x_raceline][idx]);
             y_sampling.push_back(gtpl_map[__y_raceline][idx]);
         }
+    
     // visual
     plt::clf();
 

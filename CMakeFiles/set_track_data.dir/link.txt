@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/set_track_data.dir/set_track_data.cpp.o CMakeFiles/set_track_data.dir/makeCSV.cpp.o -o bin/set_track_data 

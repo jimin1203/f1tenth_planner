@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/read_csv1.dir/read_csv1.cpp.o -o bin/read_csv1  /usr/lib/x86_64-linux-gnu/libpython3.10.so 
