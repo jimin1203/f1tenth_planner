@@ -37,7 +37,6 @@ typedef vector<double> DVector;
 typedef vector<int>    IVector;
 typedef map<string, DVector> DMap;
 typedef map<string, IVector> IMap;
-typedef map<DVector, DVector> DDMap;
 
 struct Node {
     int layer_idx;

@@ -178,7 +178,7 @@ int main() {
             y_sampling.push_back(gtpl_map[__y_raceline][idx]);
         }
     
-    // visual
+    // visual process 
     plt::clf();
 
 	plt::plot(gtpl_map[__x_bound_l], gtpl_map[__y_bound_l], {{"color", "black"}});
@@ -191,5 +191,8 @@ int main() {
     plt::grid(true);
 	plt::axis("equal");
 	plt::show();  
+    // visual process
+
+
     return 0;
 }
